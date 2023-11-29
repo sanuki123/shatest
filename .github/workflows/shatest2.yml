@@ -1,0 +1,35 @@
+name: shatest2
+
+
+on:
+  #push:
+  #  branches-ignore:
+  #    - 'main'
+
+  #pull_request:
+  #  types: [opened, synchronize, reopened]
+    
+  push:
+    tags:
+      - 'aaa*'
+  
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - 
+        run: |
+          a=$(git rev-list -n 1 ${{ github.ref }})
+          echo "a=$a"
+          
+          b=$(git branch -r --contains $a | grep -q 'origin/main')
+          echo "b=$b"
+
+      - 
+        run: |
+          echo "1=${{ github.sha }}"
+          echo "2=${{ github.event.push.head.sha }}"
+          echo "3=${{ github.event.pull_request.head.sha }}"
+          echo "112221"
+  
