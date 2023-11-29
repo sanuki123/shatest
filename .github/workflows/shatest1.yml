@@ -2,9 +2,14 @@ name: shatest1
 
 
 on:
-  push:
-    branches-ignore:
-      - 'main'
+  #push:
+  #  branches-ignore:
+  #    - 'main'
+
+  pull_request:
+    types: [opened, synchronize, reopened]
+    
+  
   
 jobs:
   job1:
