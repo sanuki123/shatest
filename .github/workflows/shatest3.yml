@@ -1,0 +1,20 @@
+name: shatest3
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    
+    steps:
+
+      - 
+        run: |
+          echo "1=${{ github.sha }}"
+          echo "2=${{ github.event.push.head.sha }}"
+          echo "3=${{ github.event.pull_request.head.sha }}"
+          echo "3=${{ github.event.schedule.head.sha }}"
+          echo "1122211312211122222777"
+  
