@@ -22,10 +22,11 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0          
+          
       - 
         run: |
-        #  a=$(git rev-list -n 1 ${{ github.ref }})
-        #  echo "a=$a"
+          a=$(git rev-list -n 1 ${{ github.ref }})
+          echo "a=$a"
           
           b=$(git branch -r --contains ${{ github.sha }}
           echo "b=$b"
