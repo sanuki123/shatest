@@ -28,7 +28,7 @@ jobs:
           a=$(git rev-list -n 1 ${{ github.ref }})
           echo "a=$a"
           
-          b=$(git branch -r --contains ${{ github.sha }}
+          b=$(git branch -r --contains ${{ github.sha }})
           echo "b=$b"
           
           c=$(git branch -r --contains ${{ github.sha }} | grep -q 'origin/main')
