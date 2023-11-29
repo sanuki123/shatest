@@ -1,0 +1,19 @@
+name: shatest1
+
+
+on:
+  push:
+    branches-ignore:
+      - 'main'
+  
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - 
+        run: |
+          echo "1=${{ github.sha }}"
+          echo "2=${{ github.event.push.head.sha }}"
+
+  
