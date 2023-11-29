@@ -31,7 +31,7 @@ jobs:
           b=$(git branch -r --contains ${{ github.sha }})
           echo "b=$b"
           
-          c=$(git branch -r --contains ${{ github.sha }} | grep -q 'origin/main')
+          c=$(git branch -r --contains ${{ github.sha }} | grep -q 'origin/main'; echo$?)
           echo "c=$c"
 
       - 
