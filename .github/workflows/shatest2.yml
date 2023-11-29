@@ -25,12 +25,16 @@ jobs:
           
       - 
         run: |
-          git rev-parse origin/main
+          git rev-parse HEAD
 
       - 
         run: |
-          echo "1=${{ github.sha }}"
-          echo "2=${{ github.event.push.head.sha }}"
-          echo "3=${{ github.event.pull_request.head.sha }}"
-          echo "112221131221112222277711"
+          git rev-parse origin/main
+
+      #- 
+      #  run: |
+      #    echo "1=${{ github.sha }}"
+      #    echo "2=${{ github.event.push.head.sha }}"
+      #    echo "3=${{ github.event.pull_request.head.sha }}"
+      #    echo "112221131221112222277711"
   
