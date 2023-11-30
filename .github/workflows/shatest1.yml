@@ -20,6 +20,7 @@ jobs:
     steps:
       - 
         run: |
+          #ううううううううううう
           echo "1=${{ github.sha }}" #あああああ
           #いいいいい
           echo "2=${{ github.event.push.head.sha }}"
