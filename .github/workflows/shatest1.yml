@@ -21,6 +21,7 @@ jobs:
       - 
         run: |
           echo "1=${{ github.sha }}" #あああああ
+          #いいいいい
           echo "2=${{ github.event.push.head.sha }}"
           echo "3=${{ github.event.pull_request.head.sha }}"
           echo "112221"
