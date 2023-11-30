@@ -20,7 +20,7 @@ jobs:
     steps:
       - 
         run: |
-          echo "1=${{ github.sha }}"
+          echo "1=${{ github.sha }}" #あああああ
           echo "2=${{ github.event.push.head.sha }}"
           echo "3=${{ github.event.pull_request.head.sha }}"
           echo "112221"
