@@ -26,4 +26,16 @@ jobs:
           echo "2=${{ github.event.push.head.sha }}"
           echo "3=${{ github.event.pull_request.head.sha }}"
           echo "112221"
+
+      - 
+        run: |
+          dotnet user-secrets set "AAA" "1"
+          dotnet user-secrets set "BBB" "1"
+          dotnet user-secrets set "CCC" "1"
+
+      - 
+        run: |
+          dotnet user-secrets remove "AAA"
+          dotnet user-secrets remove "BBB"
+          dotnet user-secrets remove "CCC"
   
